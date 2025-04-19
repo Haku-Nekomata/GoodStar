@@ -1,0 +1,345 @@
+body {
+    background-color: #ADD8E6;
+    color: #003366;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+form {
+    margin-bottom: 100px;
+    /* Tạo khoảng cách dưới form */
+}
+
+.navbar {
+    background-color: #87CEFA !important;
+    /* Xanh da trời nhạt */
+    border-bottom: 3px solid #4682B4;
+    /* Xanh thép */
+}
+
+.navbar-brand,
+.nav-link {
+    color: #003366 !important;
+    /* Xanh dương đậm */
+}
+
+.nav-link:hover {
+    color: #1E90FF !important;
+    /* Xanh dương sáng */
+}
+
+button {
+    background-color: #1E90FF !important;
+    /* Xanh dương sáng */
+    border: none;
+    color: white;
+}
+
+button:hover {
+    background-color: #003366 !important;
+    /* Xanh dương đậm */
+}
+/* ===== General ===== */
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    background-color: #ffc0cb !important; /* Hồng pastel */
+    color: #6a0dad !important; /* Tím đậm */
+}
+
+.logoheader {
+    width: 200px;
+}
+
+.align-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* ===== Slider ===== */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover; /* Cắt ảnh để vừa khung */
+    border-radius: 10px;
+    display: block;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* ===== Buttons ===== */
+.btn {
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #ff6f61;
+    color: white;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+/* ===== Slider Navigation ===== */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background: black;
+}
+
+/* ===== Popup ===== */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-box {
+    background-color: white;
+    width: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    animation: popupFadeIn 0.3s ease-out;
+}
+
+.popup-header {
+    background-color: #ff007a;
+    color: white;
+    padding: 12px 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup-title {
+    font-size: 18px;
+}
+
+.popup-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.popup-body {
+    padding: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+@keyframes popupFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ===== Footer ===== */
+.footer {
+    background-color: #87CEFA; /* Xanh dương nhạt */
+    color: #003366;
+    padding: 10px 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    position: relative;
+    bottom: unset;
+}
+
+.footer h4, .footer h5 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.footer p, .footer li, .footer a, .footer span {
+    margin: 4px 0;
+    line-height: 1.4;
+}
+
+.footer ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding-bottom: 50px;
+}
+
+.footer-col {
+    flex: 1 1 450px;
+}
+
+.footer-col h3, .footer-col h4 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+
+.payment-methods img,
+.social-icons img,
+.app-download img {
+    height: 30px;
+    margin: 4px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 0;
+    color: #aaa;
+    border-top: 1px solid #333;
+    margin: 0;
+    font-size: 20px;
+}
+
+.subscribe-form {
+    margin-top: 10px;
+}
+
+.subscribe-form input[type="email"],
+.subscribe-form input[type="text"] {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 6px;
+    border: none;
+    border-radius: 4px;
+}
+
+.subscribe-form label {
+    font-size: 13px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.subscribe-form button {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.app-download {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.app-download div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
