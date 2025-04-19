@@ -1,11 +1,109 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GOODSTAR</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
-    <h1>GoodStar</h1>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Nội dung trang -->
+    <main>
+        @{
+        int numofQuantity = 1;
+        }
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img id="Shop_carousel_img" alt="ảnh bìa của shop">
+                </div>
+                <div class="slide">
+                    <img id="BlueArchive_carousel_img" alt="blue archive">
+                </div>
+                <div class="slide">
+                    <img id="AzurLane_carousel_img" alt="azur lane">
+                </div>
+                <div class="slide">
+                    <img id="Arknights_carousel_img" alt="arknights">
+                </div>
+                <div class="slide">
+                    <img id="Bean_carousel_img" alt="bean">
+                    <div class="content">
+                        <h2>Figure bean</h2>
+                        <p>mấy con bean cute phô mai que</p>
+                        <a href="#" class="btn">Đặt hàng</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+
+        <section class="py-4">
+            <div class="container px-4 px-lg-5 mt-5" style="border: 2px solid black;">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2 class="text-dark mb-0">Blue Archive</h2>
+                    <a href="#" class="btn btn-link text-decoration-none" style="font-size: 2rem;">Xem thêm →</a>
+                </div>
+        
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4">
+                    <div class="col mb-5">
+                        <div class="card shadow-lg border-0 rounded-3 h-100">
+                            <img src="assets/images/figures/Amagi.png" class="card-img-top" alt="Tên mẫu"
+                                style="height: 300px; object-fit: cover;">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">Tên mẫu</h5>
+                                <p class="text-muted">Price: <strong>100.000đ</strong></p>
+                                <div class="mt-auto">
+                                    <a href="#" class="btn btn-outline-dark w-100">
+                                        <i class="bi-cart-fill me-1"></i> Thêm vào giỏ hàng
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ... thêm sản phẩm khác -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        const imageBasePath = "assets/images/figures";
+
+        const Shop_carousel = `${imageBasePath}/carousel/biashop.jpg`;
+        const Arknights_carousel = `${imageBasePath}/carousel/arknights.jpg`;
+        const AzurLane_carousel = `${imageBasePath}/carousel/AzurLane.jpg`;
+        const BlueArchive_carousel = `${imageBasePath}/carousel/bluearchive.jpg`;
+        const bean_carousel = `${imageBasePath}/carousel/bean.jpg`;
+
+        // Gán vào thẻ img (ví dụ)
+        document.getElementById("Shop_carousel_img").src = Shop_carousel;
+        document.getElementById("Arknights_carousel_img").src = Arknights_carousel;
+        document.getElementById("AzurLane_carousel_img").src = AzurLane_carousel;
+        document.getElementById("BlueArchive_carousel_img").src = BlueArchive_carousel;
+        document.getElementById("Bean_carousel_img").src = bean_carousel;
+
+        // Nạp header và footer tự động
+        fetch("components/header.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+
+        fetch("components/footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
 </body>
+
 </html>
